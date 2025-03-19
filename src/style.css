@@ -1,0 +1,482 @@
+/* @import url("normalize.css"); */
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-family: "Inter", sans-serif;
+  --second-family: "Manrope", sans-serif;
+  --Primary-PR050: rgb(246, 252, 255);
+  --Primary-white: #ffffff;
+  --Primary-PR600: rgb(14, 115, 246);
+  --Primary-PR500: rgb(64, 148, 247);
+  --Dark-Gray-2: #252c32;
+  --Mid-Gray-3: #84919a;
+  --Mid-Gray-1: rgb(91, 104, 113);
+  --Gray: rgb(238, 240, 242);
+  --Mid-Gray-4: #9aa6ac;
+  --Day-Text-Icons-text-01: #191c30e6;
+  --Light-Gray-2: rgb(221, 226, 228);
+  --Dark-Gray-3: rgb(48, 57, 64);
+  --Light-Gray: rgb(246, 248, 249);
+}
+
+html,
+body {
+  color: var(--Day-Text-Icons-text-01);
+  background-color: var(--Primary-PR050);
+  font-family: var(--font-family);
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+  background: var(--Primary-white);
+}
+
+.header__title {
+  min-width: 366px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header__title__text {
+  color: var(--Dark-Gray-2);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  position: relative;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 100%;
+  border-bottom: 1px solid var(--Primary-PR500);
+}
+
+.header__logout {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 16px;
+  cursor: pointer;
+
+  color: var(--Primary-PR600);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  text-align: left;
+
+  border-bottom: 1px dashed #0e73f6;
+}
+
+.content {
+}
+
+.menu {
+}
+
+.menu__header {
+  background: var(--Primary-white);
+  width: 100%;
+  padding: 10px 16px 6px 16px;
+  box-sizing: border-box;
+  height: 56px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.menu__header__title {
+  color: var(--Day-Text-Icons-text-01);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -1.4%;
+  text-align: left;
+}
+
+.menu__header__button {
+  background: rgb(64, 148, 247);
+  border-radius: 4px;
+  padding: 0px 8px 0px 8px;
+
+  color: rgb(246, 248, 249);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu__from {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.menu__from__filter {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__from__filter__date {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu__from__filter__date__picker {
+  color: var(--Day-Text-Icons-text-01);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+}
+
+.menu__from__filter--input {
+  background: var(--Primary-white);
+  border: 1px solid var(--Light-Gray-2);
+  height: 32px;
+  border-radius: 6px;
+}
+
+.menu__from__filter__date__picker__input {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 40px 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  width: 180px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.menu__from__filter__date__picker__button {
+  position: absolute;
+  right: 23px;
+  top: 4px;
+  background: url("/Close.svg") no-repeat center;
+  height: 24px;
+  width: 24px;
+}
+
+/* убераю стандартную иконку  */
+.menu__from__filter__date-picker {
+  position: relative;
+  display: inline-block;
+}
+
+/* Стилизация инпута */
+.menu__from__filter__date__picker__input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 40px 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  width: 180px;
+  cursor: pointer;
+}
+
+/* Скрываем стандартную иконку */
+.menu__from__filter__date__picker__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Добавляем кастомную иконку */
+.menu__from__filter__date-picker::after {
+  content: "";
+  background: url("/Calendar.svg") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Для Firefox отдельно скрываем стандартную иконку */
+.menu__from__filter__date__picker__input::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+.menu__from__filter--input-placeholder::before {
+  content: attr(data-placeholder);
+  color: gray;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.menu__from__filter__date__picker__input:not(:placeholder-shown)::before {
+  content: "";
+}
+
+.menu__from__filter__search {
+  width: 260px;
+  position: relative;
+}
+
+.menu__from__filter__search__input {
+  padding: 4px 10px 4px 12px;
+  width: 100%;
+}
+
+.menu__from__filter__search__input::placeholder {
+  color: var(--Mid-Gray-4);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+}
+
+.menu__from__filter__search-button {
+  width: 24px;
+  height: 24px;
+  background: url("/Search.svg") no-repeat center;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.menu__from__filter__button {
+  color: var(--Primary-PR500);
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  border-bottom: 1px solid var(--Primary-PR500);
+}
+
+.menu__from__checkbox {
+  color: var(--Dark-Gray-2);
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 8px 0px 8px;
+}
+
+.trip-list__item {
+  padding: 24px 16px;
+  display: flex;
+  gap: 28px;
+  background-color: var(--Primary-white);
+  border-radius: 6px;
+  position: relative;
+}
+
+.trip-list__item--block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trip-list__item__title,
+.trip-list__item__button {
+  color: var(--Mid-Gray-3);
+  font-family: ver(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.trip-list__item__subtitle {
+  color: var(--Dark-Gray-2);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.trip-list__item__number {
+  width: 68px;
+}
+
+.trip-list__item__date {
+  width: 176px;
+}
+
+.trip-list__item__plan {
+  width: 114px;
+  align-items: flex-end;
+}
+
+.trip-list__item__fact {
+  width: 86px;
+  align-items: flex-end;
+}
+
+.trip-list__item__route {
+  width: 562px;
+  position: relative;
+}
+
+.trip-list__item__route__img {
+  width: 16px;
+  height: 16px;
+}
+
+.tooltip {
+  position: absolute;
+  right: -16px;
+  bottom: 4px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+
+  position: absolute;
+  bottom: 26px;
+  right: 0px;
+  transform: translateX(91%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  width: 219px;
+  background-color: var(--Dark-Gray-3);
+  color: var(--Light-Gray);
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+}
+
+.tooltip-text__item {
+  position: relative;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 100%;
+}
+
+.tooltip-text__item::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 10px;
+  height: 6px;
+  background-image: url("/Arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Показываем текст при наведении */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trip-list__item__status {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 96px;
+  align-items: center;
+}
+
+.trip-list__item__button {
+  border-radius: 10px;
+  background: rgb(238, 240, 242);
+  padding: 8px;
+  color: ver(--Mid-Gray-1);
+}
+
+.trip-list__title--long-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trip-list__item__subtitle--no-active {
+  color: var(--Primary-PR600);
+  border-bottom: 1px solid var(--Primary-PR600);
+  width: calc(100% - 21px);
+}
+
+.trip-list__item__subtitle--active {
+  color: var(--Primary-PR600);
+}

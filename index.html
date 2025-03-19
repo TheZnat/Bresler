@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Планируйте и отслеживайте свои поездки. Удобный сервис для управления командировками." />
+  <meta name="keywords" content="поездки, командировки, планирование, управление расходами, travel, trips" />
+  <meta property="og:title" content="Мои поездки" />
+  <meta property="og:description" content="Планируйте и отслеживайте свои поездки с удобным сервисом." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Мои поездки</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header">
+      <div class="header__title">
+        <h1 class="header__title__text">Поездки</h1>
+      </div>
+
+
+      <button class="header__logout">
+        Заболоцкий К.О
+        <img src="/Logout.svg" alt="logout" class="header__Logout__img">
+      </button>
+    </div>
+  </header>
+
+  <main class="content">
+    <menu class="menu">
+      <div class="menu__header">
+        <h2 class="menu__header__title">Мои поездки</h2>
+        <button class="menu__header__button">
+          <img src="/Plus.svg" alt="add" class="menu__header__button__img">
+          Оформить поездку</button>
+      </div>
+
+      <form class="menu__from">
+        <div class="menu__from__filter">
+          <div class="menu__from__filter__date">
+            <label class="menu__from__filter__date-picker">
+              Период с:
+
+              <input type="date" class="menu__from__filter__date__picker__input menu__from__filter--input">
+              <button type="button" class="menu__from__filter__date__picker__button"></button>
+
+            </label>
+
+            <label class="menu__from__filter__date-picker">
+              по:
+              <input type="date"
+                class="menu__from__filter__date__picker__input menu__from__filter--input menu__from__filter--input-placeholder">
+            </label>
+          </div>
+
+          <div class="menu__from__filter__search">
+            <input type="text" placeholder="Поиск..."
+              class="menu__from__filter__search__input  menu__from__filter--input">
+            <button type="submit" class="menu__from__filter__search-button"></button>
+          </div>
+
+          <button type="button" class="menu__from__filter__button">
+            <img src="/Reset.svg" alt="Сбросить" class="menu__from__filter__button__img">
+            Сбросить все
+          </button>
+        </div>
+        <label class="menu__from__checkbox">
+          <input type="checkbox" name="menu__from__checkbox__input" />
+          Показать архивные поездки
+        </label>
+      </form>
+    </menu>
+
+    <section class="trip-list">
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000115</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000117</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент  + подсказка -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--active">000074</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Кременчуг-Константиновское,
+            Петропавловск-Камчатский, Новосибирск, Волгоград</p>
+          <div class="tooltip">
+            <img src="/Specify.svg" alt="Подсказка" class="trip-list__item__route__img">
+            <div class="tooltip-text">
+              <span class="tooltip-text__item">Кременчуг-Константиновское,
+                Петропавловск-Камчатский,
+                Новосибирск, Волгоград, Саратов</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000115</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000211</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000118</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000119</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000120</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+      <!-- новый элемент -->
+      <div class="trip-list__item">
+        <div class="trip-list__item--block trip-list__item__number">
+          <p class="trip-list__item__title">№ поездки</p>
+          <p class="trip-list__item__subtitle trip-list__item__subtitle--no-active">000133</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__date">
+          <p class="trip-list__item__title">Дата поездки</p>
+          <p class="trip-list__item__subtitle">22.02.2024 - 27.02.2024</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__plan">
+          <p class="trip-list__item__title">Сумма, план</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__fact">
+          <p class="trip-list__item__title">Сумма, факт</p>
+          <p class="trip-list__item__subtitle">29 400,00</p>
+        </div>
+        <div class="trip-list__item--block trip-list__item__route">
+          <p class="trip-list__item__title">Город</p>
+          <p class="trip-list__item__subtitle trip-list__title--long-text">Москва, Ярославль, Ижевск, Владимир</p>
+        </div>
+        <div class="trip-list__item__status">
+          <p class="trip-list__item__title">Статус</p>
+          <button class="trip-list__item__button">Документы</button>
+        </div>
+      </div>
+
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
