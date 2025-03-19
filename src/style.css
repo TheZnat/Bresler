@@ -327,6 +327,7 @@ button {
   gap: 8px;
   width: 100%;
   padding: 8px 8px 0px 8px;
+  overflow: hidden;
 }
 
 .trip-list__item {
@@ -386,8 +387,11 @@ button {
 }
 
 .trip-list__item__route {
-  width: 562px;
+  max-width: 562px;
+  min-width: 211px;
+  flex: 1 1 auto;
   position: relative;
+  margin-right: 200px;
 }
 
 .trip-list__item__route__img {
@@ -399,6 +403,7 @@ button {
   position: absolute;
   right: -16px;
   bottom: 4px;
+  z-index: 1000;
 }
 
 .tooltip-text {
@@ -466,6 +471,8 @@ button {
 }
 
 .trip-list__title--long-text {
+  display: block;
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
